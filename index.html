@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #image {
+            
+            max-width: 200px;
+            max-height: 200px;
+            border-radius: 12px;
+        }
+    </style>
+
+    <script>
+        window.onload = function() {
+            var fileInput = document.getElementById("inImg");
+            var image = document.getElementById("image");
+
+            fileInput.addEventListener("change", function(e) {
+                image.src = URL.createObjectURL(e.target.files[0]);
+            });
+        };
+    </script>
+</head>
+<body>
+    <center>
+    <div id="container">
+        <img id="image" src="USERICON1.png" />
+
+    </div>
+        
+    <input id="inImg" type="file"/>
+</center>
+
+</body>
+</html>
